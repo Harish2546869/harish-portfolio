@@ -80,3 +80,41 @@ if (window.gsap && window.ScrollTrigger && !reduced) {
   }), { threshold: .1 });
   reveals.forEach(item => observer.observe(item));
 } else reveals.forEach(item => item.classList.add('visible'));
+
+if (window.gsap && !reduced) {
+  const heroImage = document.querySelector('.hero-image img');
+  const hero = document.querySelector('.hero');
+  if (heroImage && hero) {
+    gsap.fromTo(heroImage, { scale: 1.045 }, {
+      scale: 1,
+      duration: 1.35,
+      delay: .12,
+      ease: 'power3.out'
+    });
+    if (window.ScrollTrigger) {
+      gsap.to(heroImage, {
+        yPercent: -3,
+        ease: 'none',
+        scrollTrigger: { trigger: hero, start: 'top top', end: 'bottom top', scrub: .8 }
+      });
+    }
+  }
+
+  const cards = document.querySelectorAll('.work-card');
+  const desktopPointer = matchMedia('(hover: hover) and (pointer: fine)').matches;
+  if (desktopPointer) cards.forEach(card => {
+    const rotateX = gsap.quickTo(card, 'rotationX', { duration: .35, ease: 'power2.out' });
+    const rotateY = gsap.quickTo(card, 'rotationY', { duration: .35, ease: 'power2.out' });
+    card.addEventListener('pointermove', event => {
+      const bounds = card.getBoundingClientRect();
+      const x = (event.clientX - bounds.left) / bounds.width - .5;
+      const y = (event.clientY - bounds.top) / bounds.height - .5;
+      rotateX(y * -3);
+      rotateY(x * 3);
+    });
+    card.addEventListener('pointerleave', () => {
+      rotateX(0);
+      rotateY(0);
+    });
+  });
+}
