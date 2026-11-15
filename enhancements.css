@@ -43,4 +43,18 @@
 .dermatouch-thumbnail{height:250px;min-height:0;padding:0;background:#f6f5f2;overflow:hidden}
 .dermatouch-thumbnail img{display:block;width:100%;height:100%;max-height:none;object-fit:cover;object-position:top center;transition:transform .35s ease}
 .work-card:hover .dermatouch-thumbnail img{transform:scale(1.04)}
+
+/* Lightweight motion accents */
+.brand-dot{display:inline-block;animation:brandPulse 3.2s ease-in-out infinite}
+.hero-overlay-content .gradient{background-size:180% 100%;animation:gradientDrift 7s ease-in-out infinite alternate}
+.hero-image img{will-change:transform}
+.work-card{transform-style:preserve-3d;transition:border-color .25s,box-shadow .3s}
+.work-card:hover{box-shadow:0 18px 48px rgba(113,63,180,.16)}
+.button-arrow{display:inline-block;transition:transform .25s cubic-bezier(.2,.8,.2,1)}
+.button:hover .button-arrow{transform:translate(3px,-3px)}
+.archive-item{transition:transform .28s cubic-bezier(.2,.8,.2,1),border-color .25s,box-shadow .28s}
+.archive-item:hover{transform:translateY(-4px);box-shadow:0 14px 34px rgba(0,0,0,.25)}
+@keyframes brandPulse{0%,100%{filter:drop-shadow(0 0 0 rgba(184,118,255,0))}50%{filter:drop-shadow(0 0 8px rgba(184,118,255,.7))}}
+@keyframes gradientDrift{from{background-position:0% 50%}to{background-position:100% 50%}}
+@media(prefers-reduced-motion:reduce){.brand-dot,.hero-overlay-content .gradient{animation:none!important}.hero-image img{will-change:auto}.work-card,.archive-item{transition:none!important}.button-arrow{transition:none!important}}
 @media(max-width:640px){.dermatouch-thumbnail{height:185px;min-height:0}.dermatouch-thumbnail img{height:100%;object-position:top center}}
