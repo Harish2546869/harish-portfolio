@@ -83,3 +83,10 @@
 @media(max-width:640px){.case-showcase{padding:12px;border-radius:6px;margin-bottom:45px}.showcase-topline{padding:2px 2px 11px}.showcase-topline .eyebrow{font-size:.57rem}.showcase-index{font-size:.54rem}.showcase-stage{height:clamp(350px,100vw,410px)}.showcase-phone{width:clamp(96px,28vw,132px)}.showcase-phone-left{transform:translate(-120%,-42%) rotate(-8deg) scale(.86)}.showcase-phone-center{transform:translate(-50%,-52%) scale(1.02)}.showcase-phone-right{transform:translate(20%,-42%) rotate(8deg) scale(.86)}.showcase-device{padding:5px;border-radius:22px}.showcase-device img{border-radius:17px}.showcase-label{margin-top:9px;padding:6px 7px;font-size:.49rem}.showcase-caption{align-items:flex-start;flex-direction:column;gap:4px;padding:11px 2px 0}.showcase-caption>strong{font-size:.8rem}}
 @media(prefers-reduced-motion:reduce){.showcase-device{animation:none!important}}
 @media(max-width:640px){.dermatouch-thumbnail{height:185px;min-height:0}.dermatouch-thumbnail img{height:100%;object-position:top center}}
+
+/* A subtle pointer-lit finish for interactive portfolio surfaces. */
+.work-card,.archive-item,.contact-card{position:relative;isolation:isolate}
+.work-card:after,.archive-item:after,.contact-card:after{content:"";position:absolute;z-index:3;inset:0;pointer-events:none;opacity:0;transition:opacity .35s ease;background:radial-gradient(280px circle at var(--pointer-x,50%) var(--pointer-y,50%),rgba(175,115,255,.14),transparent 72%)}
+.work-card.pointer-active:after,.archive-item.pointer-active:after,.contact-card.pointer-active:after{opacity:1}
+.case-hero .eyebrow,.case-hero .case-title,.case-hero .case-deck,.case-hero .case-data>div{will-change:transform,opacity}
+@media(prefers-reduced-motion:reduce){.work-card:after,.archive-item:after,.contact-card:after{transition:none}.case-hero .eyebrow,.case-hero .case-title,.case-hero .case-deck,.case-hero .case-data>div{will-change:auto}}
