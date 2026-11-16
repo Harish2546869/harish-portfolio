@@ -82,6 +82,29 @@ if (window.gsap && window.ScrollTrigger && !reduced) {
 } else reveals.forEach(item => item.classList.add('visible'));
 
 if (window.gsap && !reduced) {
+  // Give case-study openings a calm, editorial entrance.
+  const caseIntro = document.querySelector('.case-hero');
+  if (caseIntro) {
+    const introItems = caseIntro.querySelectorAll('.eyebrow, .case-title, .case-deck, .case-data > *');
+    gsap.fromTo(introItems, { y: 18, autoAlpha: 0, filter: 'blur(5px)' }, {
+      y: 0, autoAlpha: 1, filter: 'blur(0px)', duration: .7,
+      stagger: .085, delay: .08, ease: 'power3.out', clearProps: 'filter'
+    });
+  }
+
+  // A soft pointer glow makes the work grid feel tactile without shifting its layout.
+  const glowCards = document.querySelectorAll('.work-card, .archive-item, .contact-card');
+  const desktopPointer = matchMedia('(hover: hover) and (pointer: fine)').matches;
+  if (desktopPointer) glowCards.forEach(card => {
+    card.addEventListener('pointermove', event => {
+      const bounds = card.getBoundingClientRect();
+      card.style.setProperty('--pointer-x', `${event.clientX - bounds.left}px`);
+      card.style.setProperty('--pointer-y', `${event.clientY - bounds.top}px`);
+      card.classList.add('pointer-active');
+    });
+    card.addEventListener('pointerleave', () => card.classList.remove('pointer-active'));
+  });
+
   const heroImage = document.querySelector('.hero-image img');
   const hero = document.querySelector('.hero');
   if (heroImage && hero) {
