@@ -67,10 +67,9 @@ const reveals = document.querySelectorAll('.reveal');
 const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
 if (window.gsap && window.ScrollTrigger && !reduced) {
   gsap.registerPlugin(ScrollTrigger);
-  gsap.set(reveals, { autoAlpha: 0, y: 22 });
   ScrollTrigger.batch(reveals, {
     start: 'top 88%', once: true,
-    onEnter: batch => gsap.to(batch, { autoAlpha: 1, y: 0, duration: .6, stagger: .075, ease: 'power2.out', overwrite: true })
+    onEnter: batch => gsap.fromTo(batch, { autoAlpha: 0, y: 22 }, { autoAlpha: 1, y: 0, duration: .6, stagger: .075, ease: 'power2.out', overwrite: true })
   });
   const hero = document.querySelector('.hero .eyebrow');
   if (hero) gsap.fromTo(hero, { x: -14, autoAlpha: 0 }, { x: 0, autoAlpha: 1, duration: .55, delay: .12, ease: 'power2.out' });
