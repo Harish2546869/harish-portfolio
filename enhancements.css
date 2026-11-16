@@ -92,3 +92,4 @@
 @media(prefers-reduced-motion:reduce){.work-card:after,.archive-item:after,.contact-card:after{transition:none}.case-hero .eyebrow,.case-hero .case-title,.case-hero .case-deck,.case-hero .case-data>div{will-change:auto}}
 .case-cover.derm-cover.wrap{width:min(var(--max),calc(100% - 64px));margin:0 auto 70px!important;border-radius:6px}
 @media(max-width:640px){.case-cover.derm-cover.wrap{width:calc(100% - 34px)}}
+.reveal{opacity:1;transform:none}
