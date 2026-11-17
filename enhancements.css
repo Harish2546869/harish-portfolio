@@ -208,3 +208,29 @@
 .dukandar-unfold-preview figcaption .eyebrow{justify-content:center}
 .dukandar-unfold-preview figcaption strong{font:500 .9rem "Space Grotesk",sans-serif;color:#f1edf4}
 @media(max-width:640px){.dukandar-unfold-preview{margin:6px 0 38px}}
+
+/* Dukandar screens grouped into two sets of four phone mockups. */
+.dukandar-screen-mockup-groups{margin:54px 0 18px}
+.dukandar-screen-group{padding:34px 0 48px;border-top:1px solid rgba(255,255,255,.1)}
+.dukandar-screen-group-head{display:grid;grid-template-columns:1fr auto;align-items:end;gap:8px 24px;margin-bottom:24px}
+.dukandar-screen-group-head .eyebrow{grid-column:1/-1}
+.dukandar-screen-group-head h2{margin:6px 0 0;font:600 clamp(1.8rem,3.6vw,2.8rem)/1 "Space Grotesk",sans-serif;letter-spacing:-.06em}
+.dukandar-screen-group-head p{max-width:340px;margin:0;color:var(--muted);font-size:.88rem}
+.dukandar-mockup-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}
+.dukandar-mockup-card{min-width:0;margin:0;overflow:hidden;border:1px solid rgba(255,255,255,.09);border-radius:6px;background:linear-gradient(155deg,#111116,#0c0c10);transition:transform .32s ease,border-color .32s,box-shadow .32s}
+.dukandar-mockup-card:hover{transform:translateY(-5px);border-color:rgba(170,113,255,.4);box-shadow:0 20px 48px rgba(0,0,0,.35)}
+.dukandar-mockup-stage{height:clamp(330px,37vw,445px);display:grid;place-items:center;overflow:hidden;padding:17px 10px;background:radial-gradient(ellipse at 50% 46%,rgba(255,109,28,.11),transparent 43%),radial-gradient(ellipse at 50% 54%,rgba(143,76,223,.13),transparent 70%),#0c0c10}
+.dukandar-screen-group:nth-child(2) .dukandar-mockup-stage{background:radial-gradient(ellipse at 50% 45%,rgba(255,101,28,.14),transparent 44%),radial-gradient(ellipse at 50% 60%,rgba(144,72,226,.1),transparent 72%),#0c0c10}
+.dukandar-device-shell{position:relative;width:min(100%,188px);padding:6px;border:1px solid rgba(255,255,255,.32);border-radius:31px;background:linear-gradient(140deg,#77727c 0%,#25242a 10%,#09090b 27%,#101014 72%,#5b5860 100%);box-shadow:inset 0 0 0 1px rgba(0,0,0,.9),0 22px 34px rgba(0,0,0,.54);transition:transform .35s ease,filter .35s ease}
+.dukandar-device-shell img{width:100%;height:auto;aspect-ratio:402/874;object-fit:cover;border-radius:24px;background:#f7f5f0}
+.dukandar-device-camera{position:absolute;z-index:2;top:9px;left:50%;width:23%;height:9px;transform:translateX(-50%);border-radius:99px;background:#050506;box-shadow:0 1px 2px rgba(255,255,255,.18)}
+.dukandar-mockup-card:nth-child(4n+1) .dukandar-device-shell{transform:rotate(-1deg)}
+.dukandar-mockup-card:nth-child(4n+2) .dukandar-device-shell{transform:rotate(1deg)}
+.dukandar-mockup-card:nth-child(4n+3) .dukandar-device-shell{transform:rotate(-.5deg)}
+.dukandar-mockup-card:nth-child(4n+4) .dukandar-device-shell{transform:rotate(1.2deg)}
+.dukandar-mockup-card:hover .dukandar-device-shell{transform:translateY(-2px) rotate(0deg) scale(1.015);filter:drop-shadow(0 0 15px rgba(155,94,232,.16))}
+.dukandar-mockup-card figcaption{display:flex;align-items:center;gap:10px;min-height:54px;padding:11px 13px;border-top:1px solid rgba(255,255,255,.08)}
+.dukandar-mockup-card figcaption span{font:.6rem "DM Mono",monospace;color:#bc8dff}
+.dukandar-mockup-card figcaption strong{font:500 .78rem "Space Grotesk",sans-serif;color:#edeaf2}
+@media(max-width:900px){.dukandar-mockup-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.dukandar-mockup-stage{height:clamp(340px,59vw,470px)}.dukandar-device-shell{width:min(100%,215px)}}
+@media(max-width:640px){.dukandar-screen-mockup-groups{margin-top:34px}.dukandar-screen-group{padding:24px 0 34px}.dukandar-screen-group-head{grid-template-columns:1fr;gap:8px;margin-bottom:17px}.dukandar-screen-group-head .eyebrow{grid-column:auto}.dukandar-screen-group-head p{font-size:.82rem}.dukandar-mockup-grid{gap:9px}.dukandar-mockup-stage{height:clamp(280px,92vw,370px);padding:10px 5px}.dukandar-device-shell{width:min(100%,174px);padding:5px;border-radius:25px}.dukandar-device-shell img{border-radius:19px}.dukandar-device-camera{top:7px;height:7px}.dukandar-mockup-card figcaption{min-height:45px;padding:9px;gap:7px}.dukandar-mockup-card figcaption strong{font-size:.68rem}}
