@@ -185,3 +185,18 @@
 @media(max-width:850px){.dukandar-gallery img:nth-child(1){min-height:470px}.dukandar-gallery img:nth-child(n+4){grid-column:span 6}.dukandar-gallery img{min-height:280px}}
 @media(max-width:640px){.dukandar-gallery{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.dukandar-gallery img:nth-child(1){grid-column:span 2;grid-row:span 2;min-height:400px}.dukandar-gallery img:nth-child(2),.dukandar-gallery img:nth-child(3){grid-column:span 1;min-height:240px}.dukandar-gallery img:nth-child(n+4){grid-column:span 1;min-height:230px;padding:10px}.dukandar-after-gallery{grid-template-columns:1fr;gap:8px;margin-bottom:36px;padding-top:19px}.dukandar-after-gallery .eyebrow{grid-column:auto}.dukandar-after-gallery h2{font-size:2rem}.dukandar-after-gallery p{font-size:.9rem}}
 
+
+/* Full-length Dukandar storefront as a softly folded phone screen. */
+.dukandar-gallery img:nth-child(7),.dukandar-gallery img:nth-child(8){grid-column:span 6}
+.dukandar-long-preview{margin:10px 0 54px;padding:38px 24px 24px;overflow:hidden;border:1px solid rgba(255,255,255,.09);border-radius:8px;background:radial-gradient(ellipse at 50% 15%,rgba(255,126,37,.18),transparent 48%),linear-gradient(145deg,#111014,#0b0a0d 70%);text-align:center}
+.dukandar-long-stage{display:flex;justify-content:center;align-items:flex-start;perspective:1800px;padding:12px 0 28px}
+.dukandar-long-device{position:relative;width:clamp(220px,24vw,292px);padding:8px;border:1px solid rgba(255,255,255,.34);border-radius:38px;background:linear-gradient(140deg,#49464f,#131217 24%,#070709 78%,#38343d);box-shadow:inset 0 1px 1px rgba(255,255,255,.4),inset 0 0 0 2px rgba(0,0,0,.8),0 35px 80px rgba(0,0,0,.52),0 0 45px rgba(255,112,31,.12);transform:rotateY(-5deg) rotateZ(-1deg);transform-origin:center;isolation:isolate}
+.dukandar-long-device:before{content:"";position:absolute;z-index:3;top:10px;left:50%;width:29%;height:13px;transform:translateX(-50%);border-radius:99px;background:#08080a;box-shadow:0 1px 2px rgba(255,255,255,.15)}
+.dukandar-long-device img{display:block;width:100%;height:auto;border-radius:29px;clip-path:polygon(2% 0,98% 0,100% 18%,97% 35%,100% 54%,96% 72%,100% 88%,98% 100%,1% 100%,3% 84%,0 68%,3% 51%,0 34%,3% 17%);filter:drop-shadow(0 12px 18px rgba(0,0,0,.3))}
+.dukandar-fold-light{position:absolute;z-index:2;inset:8px;border-radius:29px;pointer-events:none;clip-path:polygon(2% 0,98% 0,100% 18%,97% 35%,100% 54%,96% 72%,100% 88%,98% 100%,1% 100%,3% 84%,0 68%,3% 51%,0 34%,3% 17%);background:linear-gradient(90deg,rgba(0,0,0,.23),transparent 12%,rgba(255,255,255,.13) 23%,transparent 34%,rgba(0,0,0,.12) 49%,rgba(255,255,255,.1) 63%,transparent 76%,rgba(0,0,0,.24)),repeating-linear-gradient(180deg,transparent 0 350px,rgba(0,0,0,.09) 356px,rgba(255,255,255,.08) 360px,transparent 368px);mix-blend-mode:multiply}
+.dukandar-long-preview figcaption{display:flex;flex-direction:column;align-items:center;gap:5px;padding-top:17px;border-top:1px solid rgba(255,255,255,.09)}
+.dukandar-long-preview figcaption .eyebrow{justify-content:center}
+.dukandar-long-preview figcaption strong{font:500 .9rem "Space Grotesk",sans-serif;color:#f1edf4}
+@media(max-width:640px){.dukandar-long-preview{margin:6px 0 38px;padding:24px 12px 18px}.dukandar-long-stage{padding:8px 0 20px}.dukandar-long-device{width:min(100%,270px);padding:6px;border-radius:31px;transform:rotateY(-3deg) rotateZ(-.7deg)}.dukandar-long-device:before{top:8px;height:11px}.dukandar-long-device img,.dukandar-fold-light{border-radius:24px}.dukandar-long-preview figcaption strong{font-size:.82rem}}
+@media(prefers-reduced-motion:reduce){.dukandar-long-device{transform:none}}
+
