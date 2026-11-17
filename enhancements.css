@@ -201,25 +201,10 @@
 @media(prefers-reduced-motion:reduce){.dukandar-long-device{transform:none}}
 
 
-/* Continuous storefront image folded out of a phone, inspired by the supplied reference. */
-.dukandar-unfold-preview{--fold-width:clamp(245px,27vw,310px);margin:10px 0 54px;padding:32px 20px 22px;overflow:hidden;border:1px solid rgba(255,255,255,.09);border-radius:8px;background:radial-gradient(ellipse at 43% 14%,rgba(255,122,34,.16),transparent 42%),radial-gradient(ellipse at 68% 68%,rgba(42,86,79,.18),transparent 48%),linear-gradient(145deg,#111014,#0a0b0c 70%)}
-.unfold-stage{position:relative;overflow:hidden;perspective:1500px;transform-style:preserve-3d}
-.unfold-phone{position:relative;z-index:3;width:var(--fold-width);margin-left:calc(50% - 275px);filter:drop-shadow(0 35px 38px rgba(0,0,0,.58));transform:rotateY(-11deg) rotateZ(-1deg)}
-.unfold-phone-shell{position:relative;padding:9px;border:1px solid rgba(255,255,255,.42);border-radius:42px;background:linear-gradient(130deg,#5b5a5b,#17181b 20%,#060709 76%,#44454a);box-shadow:inset 0 1px 1px rgba(255,255,255,.56),inset 0 0 0 2px rgba(0,0,0,.8),0 0 0 1px #030405}
-.unfold-phone-screen{position:relative;width:100%;aspect-ratio:174/375;border-radius:32px;overflow:hidden;background-image:url("assets/archive/dukandar-app-screens/pdf-02.jpg");background-size:100% auto;background-position:top center;background-repeat:no-repeat;background-color:#f7f5ef}
-.unfold-phone-screen:before{display:none}
-.unfold-speaker{position:absolute;z-index:4;left:50%;top:5px;width:29%;height:13px;transform:translateX(-50%);border-radius:99px;background:#08090b;box-shadow:0 1px 2px rgba(255,255,255,.2)}
-.unfolded-scroll{position:relative;z-index:2;width:var(--fold-width);margin-top:-16px;margin-left:calc(50% - 85px);transform-style:preserve-3d;filter:drop-shadow(0 28px 24px rgba(0,0,0,.42))}
-.unfold-strip{position:relative;width:100%;aspect-ratio:174/375;background-image:url("assets/archive/dukandar-app-screens/pdf-02.jpg");background-size:100% auto;background-repeat:no-repeat;transform-origin:50% 0;box-shadow:inset 0 14px 20px -19px rgba(0,0,0,.8)}
-.unfold-strip:after{content:"";position:absolute;inset:0;pointer-events:none;background:linear-gradient(180deg,rgba(0,0,0,.2),transparent 5%,transparent 79%,rgba(0,0,0,.13)),linear-gradient(90deg,rgba(0,0,0,.15),transparent 9%,rgba(255,255,255,.12) 24%,transparent 37%,rgba(0,0,0,.13) 55%,rgba(255,255,255,.12) 72%,transparent 88%,rgba(0,0,0,.18));mix-blend-mode:multiply}
-.strip-two{background-position:center 33.333%;transform:translateX(10px) rotateX(16deg) rotateY(-5deg) rotateZ(2deg) scaleX(1.08);}
-.strip-three{background-position:center 66.666%;transform:translateX(-12px) rotateX(21deg) rotateY(6deg) rotateZ(-2deg) scaleX(1.14);}
-.strip-four{background-position:center 100%;transform:translateX(20px) rotateX(13deg) rotateY(-4deg) rotateZ(3deg) scaleX(1.1);}
-.strip-two:before,.strip-three:before,.strip-four:before{content:"";position:absolute;z-index:2;left:0;right:0;top:0;height:19px;background:linear-gradient(180deg,rgba(0,0,0,.28),rgba(255,255,255,.12),transparent);opacity:.8}
-.unfold-accessible-image{position:absolute!important;width:1px!important;height:1px!important;padding:0!important;margin:-1px!important;overflow:hidden!important;clip:rect(0,0,0,0)!important;white-space:nowrap!important;border:0!important}
-.dukandar-unfold-preview figcaption{display:flex;flex-direction:column;align-items:center;gap:5px;padding-top:17px;border-top:1px solid rgba(255,255,255,.09);text-align:center}
+/* Generated Dukandar phone-and-foldout mockup artwork. */
+.dukandar-unfold-preview{margin:10px 0 54px;overflow:hidden;border:1px solid rgba(255,255,255,.09);border-radius:8px;background:#0b0d0e}
+.dukandar-foldout-art{display:block;width:100%;height:auto;object-fit:cover}
+.dukandar-unfold-preview figcaption{display:flex;flex-direction:column;align-items:center;gap:5px;padding:17px 12px;border-top:1px solid rgba(255,255,255,.09);text-align:center}
 .dukandar-unfold-preview figcaption .eyebrow{justify-content:center}
 .dukandar-unfold-preview figcaption strong{font:500 .9rem "Space Grotesk",sans-serif;color:#f1edf4}
-@media(max-width:640px){.dukandar-unfold-preview{--fold-width:min(72vw,275px);margin:6px 0 38px;padding:20px 10px 17px}.unfold-phone{margin-left:calc(50% - 166px)}.unfold-phone-shell{padding:6px;border-radius:32px}.unfold-phone-screen{border-radius:25px}.unfold-phone-screen:before{top:7px;height:10px}.unfold-speaker{top:3px;height:10px}.unfolded-scroll{margin-top:-9px;margin-left:calc(50% - 111px)}.strip-two{transform:translateX(4px) rotateX(14deg) rotateY(-4deg) rotateZ(1deg) scaleX(1.06)}.strip-three{transform:translateX(-5px) rotateX(18deg) rotateY(5deg) rotateZ(-1deg) scaleX(1.1)}.strip-four{transform:translateX(8px) rotateX(12deg) rotateY(-3deg) rotateZ(1deg) scaleX(1.06)}}
-@media(prefers-reduced-motion:reduce){.unfold-phone,.unfold-strip{transition:none}}
-
+@media(max-width:640px){.dukandar-unfold-preview{margin:6px 0 38px}}
